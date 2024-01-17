@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     Button button6;
+    Button button2;
+    Button button3;
 
     int REQUEST_CODE = 0;
 
@@ -22,12 +24,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_screen);
         textView = findViewById(R.id.textView2);
         button6 = findViewById(R.id.button6);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
         button6.setOnClickListener(View -> {
             textView.setText("good");
             Intent i = new Intent(this,second.class);
             i.putExtra("message","First Screen To Second");
             startActivityForResult(i,REQUEST_CODE);
 
+        });
+
+        button2.setOnClickListener(View -> {
+            Intent i = new Intent(this,SimpleActivity.class);
+            startActivity(i);
+        });
+
+        button3.setOnClickListener(View -> {
+            Intent i = new Intent(this,CustomActivity.class);
+            startActivity(i);
         });
     }
 

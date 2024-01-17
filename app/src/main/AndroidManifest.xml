@@ -13,11 +13,14 @@
         android:theme="@style/Theme.TestApplication"
         tools:targetApi="31">
         <activity
+            android:name=".CustomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SimpleActivity"
+            android:exported="false" />
+        <activity
             android:name=".second"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
