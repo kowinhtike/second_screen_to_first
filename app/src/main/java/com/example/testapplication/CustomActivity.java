@@ -20,9 +20,8 @@ public class CustomActivity extends AppCompatActivity {
 
         // Sample data
         List<CustomItem> itemList = new ArrayList<>();
-        itemList.add(new CustomItem("Item 1", "Description 1","date1"));
-        itemList.add(new CustomItem("Item 2", "Description 2","date2"));
-        itemList.add(new CustomItem("Item 3", "Description 3","date3"));
+        itemList.add(new CustomItem("Item 1", "Description 1","date1",R.drawable.img1));
+        itemList.add(new CustomItem("Item 2", "Description 2","date2",R.drawable.img2));
         // Add more items as needed
 
         CustomAdapter adapter = new CustomAdapter(this, itemList);

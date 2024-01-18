@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,10 +47,12 @@ public class CustomAdapter extends BaseAdapter {
         TextView textViewName = convertView.findViewById(R.id.textViewName);
         TextView textViewDescription = convertView.findViewById(R.id.textViewDescription);
         TextView textViewDate = convertView.findViewById(R.id.textViewDate);
+        ImageView imageView = convertView.findViewById(R.id.imageView);
 
         textViewName.setText(currentItem.getName());
         textViewDescription.setText(currentItem.getDescription());
         textViewDate.setText(currentItem.getDate());
+        imageView.setImageResource(currentItem.getImageResourceId());
 
         convertView.setOnClickListener( View -> {
                 // Show ID in a Toast message
