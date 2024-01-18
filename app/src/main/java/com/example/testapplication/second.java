@@ -26,4 +26,11 @@ public class second extends AppCompatActivity {
             finish();
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Toast.makeText(this,"Back Event",Toast.LENGTH_LONG).show();
+
+    }
 }

@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button button6;
     Button button2;
     Button button3;
+    Button button4;
 
     int REQUEST_CODE = 0;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         button6 = findViewById(R.id.button6);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
+
         button6.setOnClickListener(View -> {
             textView.setText("good");
             Intent i = new Intent(this,second.class);
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
         button3.setOnClickListener(View -> {
             Intent i = new Intent(this,CustomActivity.class);
+            startActivity(i);
+        });
+
+        button4.setOnClickListener(View -> {
+            Intent i = new Intent(this,Recycler.class);
             startActivity(i);
         });
     }
